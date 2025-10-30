@@ -85,8 +85,8 @@ Estas son las latencias medias de 100 frames:
 | Int8  | 274,5  | 1,81 |
 | OpenCL FPGA (3 Conv)  | 198,06  | 2,51 |
 
-Base Float32
+### Base Float32
 ![Base F32](/gifs/Base.gif)
 
-Opencl Int8 primeras 3 convoluciones
+### Opencl Int8 primeras 3 convoluciones
 ![Base F32](/gifs/Opencl.gif)
