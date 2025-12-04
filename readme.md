@@ -38,7 +38,7 @@ El proyecto se divide en dos componentes principales:
 
 ---
 
-## Empezando
+## Ejecución
 
 Para compilar y ejecutar este proyecto, necesitarás tener el entorno de desarrollo de OpenCL para tu FPGA instalado y configurado.
 
