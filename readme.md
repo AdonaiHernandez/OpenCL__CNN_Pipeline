@@ -25,7 +25,20 @@ El proyecto se divide en dos componentes principales:
     * Convolución
     * Convolución Depthwise separable
     * Convolución Pointwise
-
+* **/modelos**: Contiene los modelos usados:
+    * modelo_int8 -> El modelo cuantizado a INT8
+    * modelo_int8_cut -> Es la version cuantizada sin la primera capa, ya que la entrada es en int8
+    * modelo_original -> Es la version original en FP32
+    * modelo_simplificado -> La version con el BN fusionado con el Conv
+    * modelo_sin_X -> Son los modelos que no tienen las capas aceleradas en la FPGA
+* **/scripts**:  Contiene los scripts de python usados para modificar el Modelo
+    * cutgraph -> Elimina la primera capa para que la entrada sea INT8
+    * extract_data -> Extrae los pesos y los bias para guardarlos en un archivo .h
+    * main -> Ejecuta el modelo en python
+    * renombrar -> Es para darle nombres a las capas que no cuantizaremos
+    * cuantizar -> Usa el dataset de validacion para cuantizar el modelo de FP32 a INT8
+    * simplify -> Fusiona las capas BN con las Conv
+    * test -> Muestra por pantalla el primer canal de la capa de convolucion que queramos para compararlo con la simulacion             de OpenCL
 
 ---
 
